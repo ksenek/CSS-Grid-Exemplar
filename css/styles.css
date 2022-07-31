@@ -1,0 +1,75 @@
+/*CSS Stylesheet*/
+.grid-container {
+	width: 960px;
+	margin:  auto; /* center the wrapper */
+
+	/*The element on which display: grid is applied. It’s the direct parent of all the grid items.*/
+	display: grid;
+	grid-template-columns: 25% 25% 40px 50%;
+
+	grid-gap: 2px;
+}
+
+.grid-item {
+	border-style: solid;
+	border-width: 5px;
+	border-color: pink;
+}
+		
+.grid-item-1 {
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+
+.grid-item-2 {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.grid-item-3 {
+	grid-column-start: 4;
+	grid-column-end: 5;
+}
+
+.grid-item-4 {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.grid-item-5 {
+	grid-column: 2 / 5;
+
+	/*declare as a wrapper for nested grid*/
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 90% 10%;
+}
+
+.grid-item-a, .grid-item-c {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.grid-item-b, .grid-item-d {
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+.grid-item-a, .grid-item-b, .grid-item-c, .grid-item-d {
+	border-style: solid;
+	border-width: 2px;
+	border-color: blue;
+	/*make rounded corners*/
+	border-radius: 25px;
+	padding-left: 5px;
+}
+
+.grid-item-a, .grid-item-b {
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+.grid-item-c, .grid-item-d {
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
